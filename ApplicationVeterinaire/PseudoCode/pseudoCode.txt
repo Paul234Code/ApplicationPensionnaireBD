@@ -1,0 +1,302 @@
+=================================================================================
+|========                   Pseudo-code du programme                            |
+=================================================================================
+Nom  :   GestionCliniqueVeterinaire
+Role :   implemente la gestion d'un pensionnaire d'animaux
+
+Variables:
+string[,]Tableau = new string[10,7] :  une Matrice de 10 lignes et 7 colonne contenant des chaines de caractere
+numeroID : entier  une variable permettant  gerer l'ID des animaux
+nombreCourantAnimaux: entier permettant de stocker le nombre d'animaux dans la liste 
+// on affiche d'abord le Menu de l'application
+
+//demarrage du programme
+Debut(Programme)
+
+AfficheMenu()
+=================================================================================
+                            Fonction SelectChoice
+=================================================================================
+Nom:  SelectChoice
+Role : effectue un traitement d'actions suivant le choix de l'utilisateur
+Type : ne retourne retourne rien 
+
+Debut
+   Variables Locales:
+     CHOIX : caractere  qui va stocker le choix de l'utilsateur
+
+
+     Selon(CHOIX)
+       debut
+           '1':   appel de la methode TraiterAjoutAnimal()
+                  sortir du cas 1
+           '2':   appel de la fonction VoirListeAnimaux()
+                  sortir du cas 2
+           '3':   appel de voirListeProprietaire()
+                  sortir du cas 3
+           '4':   appel de voirNombreTotalAnimaux()
+                  sortir du cas 4
+           '5':   appel de VoirPoidsTotalAnimaux()
+                  sortir du cas 5
+           '6':   appel de extraireAnimauxSelonCouleur()
+                  sortir du cas 6
+           '7':   appel de RetirerUnAnimalDeListe()
+                  sortir du cas 7
+           '8':   quitter le programme
+                  sortir du cas 8
+       defaut:
+            AfficherMessageErreur()
+            sortir du cas defaut 
+         fin
+Fin
+
+   
+========================================================================
+             Fonction  AfficherMenu
+=======================================================================
+Nom:  AfficherMenu
+Role : affiche le menu du programme
+Type : ne retourne rien
+Debut
+  Ecrire("Taper 1 pour ajouter un animal")
+  Ecrire("Taper 2 pour afficher la liste des animaux ")
+  Ecrire("Taper 3 voir la liste des proprietaires")
+  Ecrire("Taper 4 pour Total animaux")
+  Ecrire("Taper 5 pour le Poids Total")
+  Ecrire("Taper 6 voir la liste des animmaux par couleur")
+  Ecrire("Taper 7 pour retirer un anamal de la liste")
+  Ecrire("Taper 8 pour quitter l'application ")
+Fin
+
+================================================================================
+                 Fonction  AjouterUnAnimal
+===============================================================================
+Nom: AjouterUnAnimal
+Role : permet de saisir et lire les informations d'un animal
+Type : ne retourne retourne rien
+
+Debut
+
+   variables locales:
+        type , nom, age, poids, couleur, proprietaire
+
+   Ecrire("Veuillez saisir le type de l'animal ")
+   type <-- Lire(type)
+   Ecrire("Veuillez saisir le nom de l'animal: ")
+   nom <-- Lire(nom)
+   Ecrire("Veuillez saisir l'age de l'animal: ")
+   age <-- Lire(age)
+   Ecrire("Veuillez saisir le poids de l'animal:")
+   poids <--- Lire(poids)
+   Ecrire("Veuillez saisir la couleur de l'animal: ")
+   couleur <--Lire(couleur)
+   Ecrire("Veuillez saisir le nom du proprietaire: ")
+   proprietaire <--Lire(proprietaire)
+   tableau[numeroID, 0] = Convertir( numeroID) en chaine de caractere
+   tableau[numeroID, 1] = type
+   tableau[numeroID, 2] = nom
+   tableau[numeroID, 3] = age
+   tableau[numeroID, 4] = poids
+   tableau[numeroID, 5] = couleur
+   tableau[numeroID, 6] = proprietaire
+   ++numeroID;
+   ++nombreCourantAnimaux;
+Fin
+
+============================================================================
+             Fonction TraiterAjoutAnimal
+============================================================================
+Nom: TraiterAjoutAnimal
+Role : permet d'ajouter un animal sur la bonne place dans le tableau
+Type : ne retourne retourne rien
+
+Debut
+   variable locales:
+     ligne : entier    pour recuperer une eventuelle ligne vide dans le tableau
+     si nombreCourantAnimaux < 10 alors
+       debut
+       |   
+       |     si numeroID == 10 alors
+       |         debut
+       |           |  ligne <--RechercheLigneVide()
+       |           | Ajouter2UnAnimal(ligne)
+       |          fin
+       |       sinon si numeroID < 10 alors
+       |         debut
+       |           |  ligne = RechercheLigneVide()
+       |           |  si ligne == 0 alors
+       |           |   |   debut
+       |           |   |    | AjouterUnAnimal()
+       |           |   |    | 
+       |           |   |   fin
+       |           |   |
+       |           |  sinon si ligne < 0 alors
+       |           |   |   debut
+       |           |   |    | AjouterUnAnimal()
+       |           |   |   fin
+       |           |   |
+       |           |   sinon
+       |           |
+       |           |       debut
+       |           |        |   Ajouter2UnAnimal(ligne);
+       |           |       fin
+       |           |   
+       |           |
+       |          fin
+       |        
+       |
+       |
+       fin
+     sinon
+      debut
+        | Ecrire("Taille maximale atteinte ")
+      fin
+
+
+
+Fin
+
+======================================================================
+           Fonction VoirPoidsTotalAnimaux
+=====================================================================
+Nom: VoirPoidsTotalAnimaux
+Role : calcule le poids Total des animaux present dans la liste et l'affiche a ecran
+Type : ne retourne retourne rien 
+Debut
+  variables locales:
+   Total    : entier  qui va stocker le total 
+   compteur : entier pour parcourir le tableau
+   Tableau  : une matrice de 10 ligne et 7 colonne
+   PoidsTotal <-- 0
+   pour compteur <--0, Longeur(Tableau)-1 par pas de 1
+     si Tableau[compteur,4]== vide
+         on saute la ligne
+     PoidsTotal <-- PoidsTotal + Tableau[compteur,4]
+
+    Ecrire(PoidsTotal)
+Fin
+
+=====================================================================
+              Fonction VoirListePropriétaire
+=====================================================================
+Nom: VoirListeProprietaire
+Role : extrait la colonne des proprietaies des animaux present dans la liste et 
+       les affiche  sur l'ecran
+Type : ne retourne retourne rien
+
+Debut
+  Variables Locales:
+    compteur :    entier pour parcourir la colonne 6 le tableau
+    Tableau  :    une matrice de 10 ligne et 7 colonne
+    pour compteur <--0, Longeur(Tableau)-1 pas de 1 faire
+       Ecrire(Tableau[compteur,6])
+
+     fin(pour)
+Fin
+
+================================================================================
+               Fonction VoirNombreTotalAnimaux
+================================================================================
+Nom: VoirNombreTotalAnimaux
+Role : calcule le nombre d'animaux present dans la liste et l'affiche a ecran
+Type : ne retourne retourne rien 
+Debut
+   variables locales:
+      compteur :          entier  pour parcourir les lignes du tableau colonne le tableau
+      Tableau  :          une matrice de 10 ligne et 7 colonne
+      nombreTotalAnimaux = 0 :   entier qui va contenir le nombre total d'animaux
+    pour compteur <--0 Longeur(Tableau)-1 pas de 1 faire
+         debut
+           si Tableau[compteur,0] == vide
+                sauter ligne suisvante
+            nombreTotalAnimaux <-- nombreTotalAnimaux +1 
+         fin
+    fin(pour)
+    Ecrire (nombreTotalAnimaux)
+Fin
+
+======================================================================
+              fonction RetirerUnAnimalDeListe
+======================================================================
+Nom: RetirerUnAnimalDeListe
+Role: supprimer un animal dans la liste et affiche la nouvelle liste a jour
+Type: ne retourne rien
+Debut
+   Variables Locales:
+     id : chaine de caractere
+     indice: entier
+     identifiant: entier 
+     resultat: booleenne 
+
+     si nombreCourantAnimaux > 0 alors
+          Ecrire("SAISIR ID DE L'ANIMAL")
+          id <--Lire(id)
+          resultat <--Conversion(id --> identifiant)
+      
+         Debut
+            si resultat == vraie alors
+              Debut
+               si identifiant >= numeroID ou identifiant < 0 alors
+                    
+                        AfficherMessageErreur()
+                sinon
+                   Rechercher(id)
+                   Supprimer(tous les champs de la ligne id)
+              fin
+
+
+         Fin
+Fin
+       
+
+
+====================================================================
+                 fonction ExtraireAnimauxSelonCouleurs
+====================================================================
+Nom: ExtraireAnimauxSelonCouleurs
+Role: extraire et afficher la liste des animaux correspondant a une couleur donné
+Type: ne retourne rien
+
+Debut
+  variables locales:
+      couleur : chaine de caractere
+    Ecrire("VEUILLEZ SAISIR LA COULEUR DE RECHERCHE : ")
+    couleur <-- Convertir(Lire(couleur))
+    Selon(couleur)
+       debut
+         cas "bleu":
+            afficher les animaux bleu
+            sortir du cas
+         cas "rouge":
+            afficher animaux rouge
+            sortir du cas
+         cas "violet":
+            afficher animaux violet
+            sortir du cas
+         defaut:
+           AfficherMessageErreur()
+           sortir du defaut
+      fin
+FIN
+
+
+
+===================================================================
+              Fonction StartTheMachine
+===================================================================
+Nom: StartTheMachine
+Role : permet de lancer l'application tant que l'utilisateur ne decide pas de quitter
+Type: ne retourne rien
+
+Debut
+   Variables Locales:
+      - choix: de type caractere
+ Tant que Condition vraie
+   debut
+      Ecrire ("taper votre choix")
+      choix <--Lire(choix)
+      SelectChoice(choix)
+      AfficherMenu()
+  finTant que
+Fin
+
