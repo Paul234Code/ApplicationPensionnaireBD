@@ -1,0 +1,16 @@
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ApplicationVeterinaire.exe
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ApplicationVeterinaire.deps.json
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ApplicationVeterinaire.runtimeconfig.json
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ApplicationVeterinaire.runtimeconfig.dev.json
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ApplicationVeterinaire.dll
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ref\ApplicationVeterinaire.dll
+C:\Users\14182\source\repos\ApplicationVeterinaire\bin\Debug\net5.0\ApplicationVeterinaire.pdb
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.AssemblyInfoInputs.cache
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.AssemblyInfo.cs
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.csproj.CoreCompileInputs.cache
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.dll
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ref\ApplicationVeterinaire.dll
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.pdb
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.genruntimeconfig.cache
+C:\Users\14182\source\repos\ApplicationVeterinaire\obj\Debug\net5.0\ApplicationVeterinaire.csproj.AssemblyReference.cache

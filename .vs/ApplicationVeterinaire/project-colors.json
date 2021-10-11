@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "637567ec-8fae-4308-8cb5-f1919e2f8742": {
+      "ProjectGuid": "637567ec-8fae-4308-8cb5-f1919e2f8742",
+      "DisplayName": "ApplicationVeterinaire",
+      "ColorIndex": 0
+    },
+    "78f78989-4eaf-4db9-b038-d6f3d57279ee": {
+      "ProjectGuid": "78f78989-4eaf-4db9-b038-d6f3d57279ee",
+      "DisplayName": "ApplicationVeterinaireLibrary",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
