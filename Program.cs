@@ -80,7 +80,6 @@ namespace ApplicationVeterinaire
         private  static void AfficherMenu() 
         {
             Console.WriteLine();
-            Console.WriteLine("++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("1- Ajouter un animal");
             Console.WriteLine("2- Voir la liste de tous les animaux en pension");
             Console.WriteLine("3- Voir la liste de tous les proprietaires");
@@ -89,7 +88,6 @@ namespace ApplicationVeterinaire
             Console.WriteLine("6- Voir la liste des animmaux d'une couleur(rouge,bleu ou violet)");
             Console.WriteLine("7- Retirer un anamal de la liste");
             Console.WriteLine("8- Quitter l'application ");
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine();
 
         }
