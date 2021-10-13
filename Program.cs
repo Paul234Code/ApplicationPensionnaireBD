@@ -13,17 +13,7 @@ namespace ApplicationVeterinaire
 
         static void  Main(string[] args)
         {
-            Console.WriteLine("Local Time:" + DateTime.Now);
             
-            if (Console.BackgroundColor == ConsoleColor.Black)
-             {
-                
-                Console.ForegroundColor = ConsoleColor.DarkGreen;
-            } 
-
-
-
-
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
             Console.WriteLine("Bienvenue dans l'application gestion clinique Veterinaire");
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
