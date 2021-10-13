@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+wkoZamqx196wzH25PIczNSXdWIZZy7ZAs4XImx06xXJ1oPtpkX1cg6NMSa7ZYtchYGjHUgjrTc2LLT8hcelLw==",
+  "dgSpecHash": "/zO0Ox5Pth45N7+Dl/UsFUYKfbRfLxxbFvQCqgUbsd54etT2TDBa8oW4YHf0QVTPwaEK9RGyHyAGus7WQDl1Ng==",
   "success": true,
   "projectFilePath": "C:\\Users\\14182\\source\\repos\\ApplicationVeterinaire\\ApplicationVeterinaire.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\14182\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.9\\microsoft.netcore.app.host.win-x64.5.0.9.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }
