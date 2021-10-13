@@ -13,7 +13,7 @@ namespace ApplicationVeterinaire
 
         static void  Main(string[] args)
         {
-            Console.WriteLine("                          Local Time:" + DateTime.Now);
+            Console.WriteLine("Local Time:" + DateTime.Now);
             
             if (Console.BackgroundColor == ConsoleColor.Black)
              {
@@ -124,15 +124,15 @@ namespace ApplicationVeterinaire
         private void AjouterUnAnimal(  ) 
         { 
             Console.WriteLine("Veuillez saisir le type de l'animal: ");
-            string type  = Console.ReadLine();
+            var type  = Console.ReadLine();
             Console.WriteLine("Veuillez saisir le nom de l'animal: ");
-            string nomAnimal = Console.ReadLine();
+            var nomAnimal = Console.ReadLine();
             Console.WriteLine("Veuillez saisir l'age de l'animal: ");
-            string ageAnimal = Console.ReadLine();
+            var ageAnimal = Console.ReadLine();
             Console.WriteLine("Veuillez saisir le poids de l'animal:");
-            string poidsAnimal = Console.ReadLine();
+            var poidsAnimal = Console.ReadLine();
             Console.WriteLine("Veuillez saisir la couleur de l'animal: ");
-            string couleurAnimal = Console.ReadLine().ToLower();
+            var couleurAnimal = Console.ReadLine().ToLower();
             if (!ValidationCouleur(couleurAnimal))
                 AfficherMessageErreur("votre couleur n'est pas valide.........");
             while (!ValidationCouleur(couleurAnimal))
@@ -148,7 +148,7 @@ namespace ApplicationVeterinaire
 
             }
             Console.WriteLine("Veuillez saisir le nom du proprietaire de l'animal: ");
-            string nomProprietaireAnimal  = Console.ReadLine();
+            var nomProprietaireAnimal  = Console.ReadLine();
 
             // Appel de la fonction pour traiter l'ajout d'un animal
             
@@ -359,15 +359,15 @@ namespace ApplicationVeterinaire
         private void Ajouter2UnAnimal(int index)
         {
             Console.WriteLine("Veuillez saisir le type de l'animal: ");
-            string type = Console.ReadLine();
+            var type = Console.ReadLine();
             Console.WriteLine("Veuillez saisir le nom de l'animal: ");
-            string nomAnimal = Console.ReadLine();
+            var nomAnimal = Console.ReadLine();
             Console.WriteLine("Veuillez saisir l'age de l'animal: ");
-            string ageAnimal = Console.ReadLine();
+            var ageAnimal = Console.ReadLine();
             Console.WriteLine("Veuillez saisir le poids de l'animal:");
-            string poidsAnimal = Console.ReadLine();
+            var poidsAnimal = Console.ReadLine();
             Console.WriteLine("Veuillez saisir la couleur de l'animal: ");
-            string couleurAnimal = Console.ReadLine();
+            var couleurAnimal = Console.ReadLine();
             if (!ValidationCouleur(couleurAnimal))
                 AfficherMessageErreur("votre couleur n'est pas valide.........");
             while (!ValidationCouleur(couleurAnimal))
@@ -378,7 +378,7 @@ namespace ApplicationVeterinaire
 
             }
             Console.WriteLine("Veuillez saisir le nom du proprietaire: ");
-            string nomProprietaireAnimal = Console.ReadLine();
+            var nomProprietaireAnimal = Console.ReadLine();
 
            //on insere les informations saisies dans le tableau
 

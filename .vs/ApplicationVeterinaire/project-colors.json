@@ -10,7 +10,12 @@
       "ProjectGuid": "78f78989-4eaf-4db9-b038-d6f3d57279ee",
       "DisplayName": "ApplicationVeterinaireLibrary",
       "ColorIndex": 1
+    },
+    "7bc2c97c-8084-4337-99f6-9a715494a6c6": {
+      "ProjectGuid": "7bc2c97c-8084-4337-99f6-9a715494a6c6",
+      "DisplayName": "ApplicationVeterinaireTests",
+      "ColorIndex": 2
     }
   },
-  "NextColorIndex": 2
+  "NextColorIndex": 3
 }
