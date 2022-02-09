@@ -11,7 +11,7 @@ namespace ApplicationVeterinaire
         static int nombreCourantAnimaux = 0;
         static int numeroID = 0;
 
-        static void  Main(string[] args)
+        static void  Main()
         {
             
             Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
@@ -20,10 +20,10 @@ namespace ApplicationVeterinaire
             Program program = new();
             Console.WriteLine();
             AfficherMenu();
-            Console.WriteLine("numeroID : " + numeroID);
+            //Console.WriteLine("numeroID : " + numeroID);
             program.StartTheMachine();
             
-            Console.WriteLine("numeroID : " + numeroID);
+            //Console.WriteLine("numeroID : " + numeroID);
             
            
 
@@ -96,7 +96,6 @@ namespace ApplicationVeterinaire
                 AfficherMenu();
             }
 
-
         }
 
        
@@ -129,11 +128,6 @@ namespace ApplicationVeterinaire
                 couleurAnimal = Console.ReadLine().ToLower();
                 if (!ValidationCouleur(couleurAnimal))
                     AfficherMessageErreur("votre couleur n'est pas valide.........");
-
-
-
-
-
             }
             Console.WriteLine("Veuillez saisir le nom du proprietaire de l'animal: ");
             var nomProprietaireAnimal  = Console.ReadLine();
@@ -151,7 +145,6 @@ namespace ApplicationVeterinaire
             ++nombreCourantAnimaux;
             Console.WriteLine("numeroID apres AjouterUnAnimal() :" + numeroID);
             Console.WriteLine("nombreAnimaux apres AjouterUnAnimal() :" + nombreCourantAnimaux);
-
 
         }
         
