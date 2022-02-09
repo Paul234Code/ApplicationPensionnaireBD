@@ -22,13 +22,7 @@ namespace ApplicationVeterinaire
             Program program = new();
             Console.WriteLine();
             AfficherMenu();
-            //Console.WriteLine("numeroID : " + numeroID);
             program.StartTheMachine();
-            
-            //Console.WriteLine("numeroID : " + numeroID);
-            
-           
-
         }// **************** fin de la methode Main ************************************
 
 
@@ -129,9 +123,6 @@ namespace ApplicationVeterinaire
             }
             Console.WriteLine("Veuillez saisir le nom du proprietaire de l'animal: ");
             var nomProprietaireAnimal  = Console.ReadLine();
-
-            // Appel de la fonction pour traiter l'ajout d'un animal
-
             MySqlConnection connection = gestionPensionnaire.ConnectToDatabase();
             string request = "INSERT INTO animal(Type,Nom,Age,Poids,Couleur,Proprietaire)" +
                              "VALUES(@Type,@Nom,@Age,@Poids,@Couleur,@Proprietaire)";
@@ -145,7 +136,6 @@ namespace ApplicationVeterinaire
             mySqlCommand.ExecuteReader();
             connection.Close();
             Console.WriteLine("Requete INSERT INTO terminé ");
-
         }
         
          // Fonction qui affiche la liste des animaux en pensions(choix 2)
@@ -261,8 +251,7 @@ namespace ApplicationVeterinaire
                 }
             }
             connection.Close();
-        }
-        
+        }       
         // Une fonction qui permet de retirer un animal dans la liste
         // En connaissant son ID
         private void RetirerUnAnimalDeListe() 
@@ -276,12 +265,11 @@ namespace ApplicationVeterinaire
             mySqlCommand.ExecuteReader();
             connection.Close();
             Console.WriteLine("Suppression terminé avec sucess");
-        }      
+        }
+        // Fonction qui valide la couleur de l'animal
         private bool ValidationCouleur(string couleur)
         {
             return couleur == "bleu" || couleur == "rouge" || couleur == "violet";
         }
-
-
     }
 }
