@@ -31,32 +31,32 @@ namespace ApplicationVeterinaire
 
 
         // On demande a l'utilisateur de faire son choix tant que ce dernier est invalide
-        private  void SelectChoice(ConsoleKeyInfo choice)
+        private  void SelectChoice(string choice)
         {
-            switch (choice.Key)
+            switch (choice)
             {
-                case ConsoleKey.D1:
+                case "1":
                     TraiterAjoutAnimal();
                     break;
-                case ConsoleKey.D2:
+                case "2":
                     VoirListeAnimauxPension();
                     break;
-                case ConsoleKey.D3:
+                case "3":
                     VoirListePropriétaire();
                     break;
-                case ConsoleKey.D4:
+                case "4":
                     VoirNombreTotalAnimaux();
                     break;
-                case ConsoleKey.D5:
+                case "5":
                     VoirPoidsTotalAnimaux();
                     break;
-                case ConsoleKey.D6:
+                case "6":
                     ExtraireAnimauxSelonCouleurs();
                     break;
-                case ConsoleKey.D7:
+                case "7":
                     RetirerUnAnimalDeListe();
                     break;
-                case ConsoleKey.D8:
+                case "8":
                     Environment.Exit(0);
                     break;
                 default:
@@ -79,31 +79,27 @@ namespace ApplicationVeterinaire
             Console.WriteLine("7- Retirer un anamal de la liste");
             Console.WriteLine("8- Quitter l'application ");
             Console.WriteLine();
-
         }
 
         // Fonction qui demarre l'Application  et qui redirrige le programme
         // en fonction de l'Entree au clavier
         private void StartTheMachine() 
         {
-            ConsoleKeyInfo cki;
+            string cki;
              
             while (true)
             {
                 Console.WriteLine("Enter votre choix ou taper CTRL+C pour quitter");
-                cki = Console.ReadKey(true);
+                cki = Console.ReadLine();
                 SelectChoice(cki);
                 AfficherMenu();
             }
-
         }
-
-       
+     
         // Fonction qui affiche un message d'errur sur la console
         private  static void AfficherMessageErreur(string message) 
         {
             Console.WriteLine(message);
-
         }
         
         // Fonction qui permet d'ajouter un animal dans le tableau 
