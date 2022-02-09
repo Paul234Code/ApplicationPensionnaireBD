@@ -108,7 +108,7 @@ namespace ApplicationVeterinaire
         
         // Fonction qui permet d'ajouter un animal dans le tableau 
         // En demandant a l'utilisateur de saisir les informations d'un animal
-        private void AjouterUnAnimal(  ) 
+        private void AjouterUnAnimal() 
         { 
             Console.WriteLine("Veuillez saisir le type de l'animal: ");
             var type  = Console.ReadLine();
