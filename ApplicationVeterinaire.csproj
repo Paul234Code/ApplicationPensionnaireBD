@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ApplicationVeterinaire\" />
+    <Compile Remove="ApplicationVeterinaire\**" />
+    <EmbeddedResource Remove="ApplicationVeterinaire\**" />
+    <None Remove="ApplicationVeterinaire\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.0.28" />
   </ItemGroup>
 
 </Project>
