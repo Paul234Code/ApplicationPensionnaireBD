@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
-using System.Data;
+﻿using MySql.Data.MySqlClient;
+using System;
 
 namespace ApplicationVeterinaire
 {
@@ -16,11 +11,11 @@ namespace ApplicationVeterinaire
             MySqlConnection connection = new MySqlConnection(stringConnection);
             try
             {
-                connection.Open();                    
+                connection.Open();
             }
             catch (Exception exception)
             {
-                Console.WriteLine("connection failed"+exception.Message);
+                Console.WriteLine("connection failed" + exception.Message);
             }
             return connection;
         }
@@ -29,6 +24,6 @@ namespace ApplicationVeterinaire
         {
 
         }
-        
+
     }
 }
